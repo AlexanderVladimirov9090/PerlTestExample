@@ -1,14 +1,12 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-#Test module.
-use Test::More;
+#Test module and tell how many tests are planned to run.
+use Test::More tests=>3;
 #This is how you load custom lib folder. When you don't type this, when running PERL script all modules will be searched in PERL main lib directory.
 use lib "lib";
 use HelloWorld;
 
-#This is how you tell how many test you wil run.
-BEGIN {plan tests=>3}
 
 #This is some kind of an object.
 my $helloWorld = HelloWorld->new(hello=>"Hello World!");
